@@ -21,7 +21,7 @@ if ($API->connect('7.7.7.1', 'admin', '')) {
     echo "<h1>User hotspot berhasil dibuat!</h1>";
     echo "<p>Username: ".$username."</p>";
     echo "<p>Password: ".$password."</p>";
-    echo "<p>Silahkan <a href='login.html'>kembali ke halaman login</a>.</p>";
+    echo "<p>Silahkan <a href='index.html'>kembali ke halaman login</a>.</p>";
     
     $API->disconnect();
 
