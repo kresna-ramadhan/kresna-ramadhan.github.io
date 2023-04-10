@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contoh Website dengan Animasi dan Tab</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Contoh Website dengan Animasi dan Tab</h1>
+
+    <div class="container">
+      <div class="tabs">
+        <div class="tab active" onclick="openTab('tab1')">Tab 1</div>
+        <div class="tab" onclick="openTab('tab2')">Tab 2</div>
+        <div class="tab" onclick="openTab('tab3')">Tab 3</div>
+      </div>
+
+      <div id="tab1" class="tab-content active">
+        <p>Ini adalah konten tab 1.</p>
+      </div>
+      <div id="tab2" class="tab-content">
+        <p>Ini adalah konten tab 2.</p>
+      </div>
+      <div id="tab3" class="tab-content">
+        <p>Ini adalah konten tab 3.</p>
+      </div>
+    </div>
+
+    <script>
+      function openTab(tabName) {
+        // Mendapatkan semua elemen dengan class "tab-content"
+        var tabContents = document.getElementsByClassName("tab-content");
+
+        // Menutup semua tab
+        for (var i = 0; i < tabContents.length; i++) {
+          tabContents[i].classList.remove("active");
+        }
+
+        // Menandai tab yang dipilih sebagai aktif
+        var selectedTab = document.getElementById(tabName);
+        selectedTab.classList.add("active");
+
+        // Menampilkan konten tab yang dipilih
+        selectedTab.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
