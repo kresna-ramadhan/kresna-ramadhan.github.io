@@ -2,7 +2,7 @@
 // Memeriksa apakah pengguna sudah login atau belum
 session_start();
 if (!isset($_SESSION['username'])) {
-    header("Location: login.html");
+    header("Location: index.html");
     exit();
 }
 
