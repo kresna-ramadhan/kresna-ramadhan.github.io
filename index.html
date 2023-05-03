@@ -1,6 +1,8 @@
 <html>
 <head><title>Selamat Datang</title></head>
 <body>
+<h1>LOGIN</h1>
+</body>
 <?php
 session_start();
 if(isset($_SESSION['email'])) {
@@ -12,5 +14,4 @@ if(isset($_SESSION['email'])) {
     echo '<script>window.location.replace("./login.php");</script>';
 }
 ?>
-</body>
 </html>
